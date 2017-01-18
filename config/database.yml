@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: totem_production
-  username: totem
+  # username: totem
   # password: <%= ENV['TOTEM_DATABASE_PASSWORD'] %>
