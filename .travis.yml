@@ -7,3 +7,4 @@ services:
 
 before_script:
   - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database totem_test;' -U postgres
