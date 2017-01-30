@@ -7,7 +7,8 @@ end
 
 
 gem 'devise'
-
+gem 'bootstrap-sass'
+gem 'sprockets'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
