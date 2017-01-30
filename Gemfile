@@ -9,6 +9,7 @@ end
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'font-awesome-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
