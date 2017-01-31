@@ -13,13 +13,17 @@
 
 
 .main-menu:hover,nav.main-menu.expanded {
-  width:180px;
-  overflow:visible;
+  width:120px;
+  overflow:hidden;
+  .nav-text {
+    display:table-cell;
+  }
+
 }
 
 .main-menu {
   background:#D8D8D8;
-  position:absolute;
+  position:fixed;
   top:0;
   bottom:0;
   height:100%;
@@ -72,15 +76,9 @@
 
 .main-menu .nav-text {
   position:relative;
-  display:table-cell;
+  display:hidden;
   vertical-align:middle;
   width:190px;
-}
-
-.main-menu>ul.logout {
-  position:absolute;
-  left:0;
-  bottom:0;
 }
 
 .no-touch .scrollable.hover {
@@ -111,12 +109,10 @@ nav ul,nav li {
 }
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
   color:#fff;
-  background-color:#5fa2db;
+  background:#D8D8D8;
 }
 
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+.side-margin {
+  margin-left: 60px;
 }
+

@@ -6,3 +6,8 @@
 .container {
   border: 1px solid black;
 }
+
+.main {
+    transition: margin-left .1s;
+    padding-left: 60px;
+}
