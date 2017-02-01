@@ -1,4 +1,10 @@
-<div>
-  <h1>Zoeker</h1>
-
+<div class="home__wrapper">
+  <h1 class="home__title">Zoeker</h1>
+  <h2 class="home__subtitle">the ultimate animal directory</h2>
+  <div class="home__buttons">
+  <%= link_to "Create", new_animal_path, class: "btn home__create-btn" %>
+  <%= link_to "Seek", animals_path, class: "btn home__seek-btn" %>
+  </div>
+  <br>
+  <%= link_to "more about our history", static_pages_about_path, class: "home__about-link" %>
 </div>

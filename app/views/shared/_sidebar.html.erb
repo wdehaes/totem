@@ -3,28 +3,32 @@
     <li class="has-subnav">
       <a href="#">
         <%= icon('search') %>
-        <span class="nav-text">search</span>
+        <%= link_to "search", animals_path, class: "nav-text" %>
+        <!-- <span class="nav-text">search</span> -->
       </a>
     </li>
 
     <li class="has-subnav">
       <a href="#">
         <%= icon('plus') %>
-        <span class="nav-text">create</span>
+        <%= link_to "create", new_animal_path, class: "nav-text" %>
+        <!-- <span class="nav-text">create</span> -->
       </a>
     </li>
 
     <li class="has-subnav">
       <a href="#">
         <%= icon('user-circle-o') %>
-        <span class="nav-text">profile</span>
+        <%= link_to "profile", root_path, class: "nav-text" %>
+        <!-- <span class="nav-text">profile</span> -->
       </a>
     </li>
 
   <li>
     <a href="#">
       <%= icon('comment-o') %>
-      <span class="nav-text">history</span>
+      <%= link_to "search", root_path, class: "nav-text" %>
+      <!-- <span class="nav-text">history</span> -->
     </a>
   </li>
 </ul>
