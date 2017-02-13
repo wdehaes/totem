@@ -1,8 +1,8 @@
 <div class="col-xs-10 col-xs-offset-1">
 
-<h1>New Animal</h1>
+<h1 class="form__title">New Animal</h1>
 
-  <%= simple_form_for @animal do |f| %>
+  <%= simple_form_for(@form, html: { class: 'form-group' }) do |f| %>
     <%= f.input :name %>
     <%= f.input :latin_name %>
     <%= f.input :description %>

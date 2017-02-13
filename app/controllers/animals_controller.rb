@@ -14,7 +14,7 @@ class AnimalsController < ApplicationController
 
   # GET /animals/new
   def new
-    @animal = Animal.new
+    @form = AnimalForm.new(Animal.new)
   end
 
   # GET /animals/1/edit
