@@ -1,0 +1,22 @@
+//Colors
+$bg-dark: #1d1d1d;
+$primary-dark: #646161;
+$secondary-dark: #A6A6A6;
+$primary-light: #D8D8D8;
+$error: #c96768;
+//Spacing
+$default-space: 2rem;
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              16;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         0;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+// $grid-float-breakpoint:     $screen-sm-min
+//** Point at which the navbar begins collapsing.
+// $grid-float-breakpoint-max: ($grid-float-breakpoint - 1)

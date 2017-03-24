@@ -1,16 +1,19 @@
 $(document).ready(function() {
 
-  $('.js-main-menu').hover(
+  $('.js-main-menu-triangle').mouseover(
     function() {
       $('.main').addClass("side-margin");
-      $('.nav-text').removeClass("hidden");
-    },
-    function() {
-      $('.main').removeClass("side-margin");
-      $('.nav-text').addClass("hidden");
+      $('.js-main-menu').removeClass("hidden");
+      $('js-main-menu-triangle').addClass("hidden");
     }
   );
-
+  $('.js-main-menu').mouseleave(
+    function() {
+      $('.main').removeClass("side-margin");
+      $('.js-main-menu').addClass("hidden");
+      $('js-main-menu-triangle').removeClass("hidden");
+    }
+  );
   $('.js-main-menu-item').hover(
     function() {
       $(this).find('.fa').addClass('white');

@@ -1,8 +1,36 @@
 <div class="col-xs-10 col-xs-offset-1">
 
-<h1 class="form__title">New Animal</h1>
+  <h1 class="form__title">New Animal</h1>
 
-  <%= simple_form_for(@form, html: { class: 'form-group' }) do |f| %>
+  <%= simple_form_for(@form, wrapper: :vertical_input_group,
+          wrapper_mappings: {
+            file: :horizontal_file_input,
+            boolean: :horizontal_boolean
+          }) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :name, wrapper: :vertical_input_group do %>
+        <%= f.input_field :name, class: "form-control form__field" %>
+      <% end %>
+      <%= f.input :latin_name, wrapper: :vertical_input_group do %>
+        <%= f.input_field :latin_name, class: "form-control form__field" %>
+      <% end %>
+      <%= f.input :description, wrapper: :vertical_input_group do %>
+        <%= f.input_field :name, class: "form-control form__field" %>
+      <% end %>
+      <%= f.input :status, wrapper: :vertical_input_group do %>
+        <%= f.input_field :status, class: "form-control form__field" %>
+      <% end %>
+      <br />
+    </div>
+
+    <div class="form-actions col-sm-offset-3">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+
+<!--   <%= simple_form_for(@form, html: { class: 'form-group' }) do |f| %>
     <%= f.input :name %>
     <%= f.input :latin_name %>
     <%= f.input :description %>
@@ -11,6 +39,6 @@
     <%= f.submit 'Update', class: 'btn btn-primary' %>
   <% end %>
 
-<%= link_to 'Back', animals_path %>
+<%= link_to 'Back', animals_path %> -->
 
 </div>

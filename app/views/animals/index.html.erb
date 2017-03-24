@@ -1,34 +1,58 @@
+<div class="animals">
+   <%= render "shared/top_navbar" %>
 
-<p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class="row js-animals">
+      <div class="animals__column col-xs-1 col-xs-offset-1">
+        <%= image_tag("test/lion.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/seahorse.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/impala.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/giraffe.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/owl.png") %>
+        <%= image_tag("test/nightingale.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/chimp.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/ss.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/big-beaked-whale.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/gharial.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/koala.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/alpaca.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/banteng.png") %>
+      </div>
+      <div class="animals__column col-xs-1">
+        <%= image_tag("test/bird.png") %>
+       </div>
+      <div class="animals__column col-xs-1 b0">
+        <%= image_tag("test/polarbear.png") %>
+      </div>
+    </div>
+  </div>
+  <div class="animals__progress">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Animals</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Latin name</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @animals.each do |animal| %>
-      <tr>
-        <td><%= animal.name %></td>
-        <td><%= animal.description %></td>
-        <td><%= animal.latin_name %></td>
-        <td><%= animal.status %></td>
-        <td><%= link_to 'Show', animal %></td>
-        <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Animal', new_animal_path %>

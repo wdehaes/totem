@@ -1,0 +1,156 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+}
+
+.p0 { padding: 0 !important; }
+.pt0 { padding-top: 0 !important; }
+.pb0 { padding-bottom: 0 !important; }
+.pr0 { padding-right: 0 !important; }
+.pl0 { padding-left: 0 !important; }
+.pt5 { padding-top: 5rem; }
+.pb5 { padding-bottom: 5rem; }
+
+.m0 { margin: 0 !important; }
+.mt0 { margin-top: 0 !important; }
+.mb0 { margin-bottom: 0 !important; }
+.mr0 { margin-right: 0 !important; }
+.ml0 { margin-left: 0 !important; }
+.mt5 { margin-top: 5rem; }
+.mb5 { margin-bottom: 5rem; }
+
+.b0 { border: none !important; }
+.bt0 { border-top: none !important; }
+.bb0 { border-bottom: none !important; }
+.br0 { border-right: none !important; }
+.bl0 { border-left: none !important; }
+
+.wa { width: auto; }
+.pointer { cursor: pointer; }
+
+hr {
+    margin: $default-space 0;
+    background-color: $bg-dark;
+    height: 2px;
+    border: none;
+}
+
+.fw {
+    width:100%;
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin translateX($x) {
+    -ms-transform: translate($x,0); /* IE 9 */
+    -webkit-transform: translate($x,0); /* Safari */
+    -o-transform: translate($x, 0);
+    transform: translate($x,0);
+}
+
+@mixin translateY($y) {
+    -ms-transform: translate(0,$y); /* IE 9 */
+    -webkit-transform: translate(0,$y); /* Safari */
+    -o-transform: translate(0, $y);
+    transform: translate(0,$y);
+}
+
+@mixin translate($x, $y) {
+    -ms-transform: translate($x,$y); /* IE 9 */
+    -webkit-transform: translate($x,$y); /* Safari */
+    -o-transform: translate($x, $y);
+    transform: translate($x,$y);
+}
+
+@mixin rotate($x) {
+  -webkit-transform: rotate($x);
+  -ms-transform: rotate($x);
+  transform: rotate($x);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.v-align {
+    position: absolute;
+    top: 50%;
+    display: block;
+    @include translateY(-50%);
+}
+
+.h-align {
+    position: absolute;
+    left: 50%;
+    display: block;
+    @include translateX(-50%);
+}
+
+.vh-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    @include translate(-50%,-50%);
+}
+
+
+@mixin flexbox(){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.toggle-visible {
+  display: none;
+}
+
+.toggle-visible.dc-shown {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.ajax-success,
+.ajax-fail {
+    display: none;
+    float: right;
+    margin: 0;
+}
+.ajax-success {color: white;}
+.ajax-fail { color: $error;}
+
+// While Typekit is loading
+.wf-loading {
+  visibility: hidden;
+}
+
+.push-footer-down {
+  min-height: 100vh;
+  min-height: calc(100vh - 305px);
+}
+
+// Site background for the newly designed pages
+.bg-alt {
+  .site-wrap {
+    background-color: $bg-dark;
+  }
+}

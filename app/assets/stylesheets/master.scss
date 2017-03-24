@@ -4,14 +4,15 @@
 @import "font-awesome";
 
 .container {
-  border: 1px solid black;
+  width: 100%;
 }
 
 .main {
     transition: margin-left .1s;
-    padding-left: 60px;
+    min-height: 100vh;
 }
 
 .side-margin {
-  margin-left: 60px;
+  margin-left: 193px;
 }
+
